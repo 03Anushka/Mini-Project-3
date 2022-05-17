@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>SPEECH SYNTHESISER</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+   
+  </head>
+
+  <body style="background-color: rgb(2, 31, 60);">
+    <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;color:rgb(245, 244, 244)">SPEECH SYNTHESISER</h1>
+    
+    <form>
+      <div class="container">
+      <div class="app"> 
+            <div class="input-single">
+                <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6" style="box-sizing:border-box; width: 600px;"></textarea>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <div id="google_element"></div> 
+                            <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                              <script>
+                              function loadGoogleTranslate () {
+                              new google.translate.TranslateElement("google_element");
+                              }
+                              </script>
+                
+                 
+              </div>         
+            <button id="start-record-btn" title="Start Recording" style="font-family: Verdana, Geneva, Tahoma, sans-serif;background-color: rgb(246, 249, 252);">Start Recognition</button>
+            <button id="pause-record-btn" title="Pause Recording" style="font-family: Verdana, Geneva, Tahoma, sans-serif;background-color: rgb(246, 249, 252);">Pause Recognition</button>
+              
+            
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div id="google_element"></div> 
+                <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                  <script>
+                  function loadGoogleTranslate () {
+                  new google.translate.TranslateElement("google_element");
+                  }
+                  </script>
+    <script src="script2.js"></script>
+    <div>
+      <label for="rate" style="color:oldlace;">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+      <div class="rate-value" style="color:oldlace;">1</div>
+      <div class="clearfix"></div>
+    </div>
+    <div>
+      <label for="pitch" style="color:oldlace;">Pitch</label><input type="range" min="0" style="color:oldlace" max="2" value="1" step="0.1" id="pitch">
+      <div class="pitch-value" style="color:oldlace;">1</div>
+      <div class="clearfix"></div>
+    </div>
+    <select>
+
+    </select>
+    
+    <div class="controls">
+      <button id="play" type="submit" style="color:oldlace;background-color:rgb(17, 17, 17)">Play</button>
+      
+    </div>
+
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
